@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://cm7ribhx64568"]
+
+[sub_resource type="Gradient" id="Gradient_8yeiw"]
+colors = PackedColorArray(1, 1, 1, 1, 0.43189, 0.43189, 0.43189, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_g3mwp"]
+noise_type = 2
+frequency = 0.0217
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ei2s5"]
+width = 1024
+height = 1024
+invert = true
+seamless = true
+seamless_blend_skirt = 1.0
+as_normal_map = true
+bump_strength = 8.8
+color_ramp = SubResource("Gradient_8yeiw")
+noise = SubResource("FastNoiseLite_g3mwp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u8nhc"]
+albedo_color = Color(0.403234, 0.644801, 0.33047, 1)
+roughness_texture = SubResource("NoiseTexture2D_ei2s5")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8yeiw"]
+material = SubResource("StandardMaterial3D_u8nhc")
+size = Vector2(120, 120)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_43ocd"]
+albedo_color = Color(0.642005, 0.816977, 0.983565, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hsito"]
+material = SubResource("StandardMaterial3D_43ocd")
+size = Vector2(100, 100)
+orientation = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_g3mwp"]
+material = SubResource("StandardMaterial3D_43ocd")
+size = Vector2(100, 100)
+orientation = 2
+
+[sub_resource type="Environment" id="Environment_8yeiw"]
+ambient_light_color = Color(0.765, 0.837, 0.9, 1)
+ambient_light_energy = 3.0
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Table" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_8yeiw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 50, 0)
+mesh = SubResource("PlaneMesh_hsito")
+
+[node name="RightWall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, -50)
+mesh = SubResource("PlaneMesh_g3mwp")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 14.142, 40.0973, 14.142)
+projection = 1
+size = 60.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_8yeiw")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 131.859, 0)
+light_color = Color(0.93887, 0.897672, 0.843771, 1)
+light_energy = 200.0
+light_indirect_energy = 16.0
+spot_range = 576.099
+spot_angle = 54.36
