@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwfwjooc68cpp"]
+[gd_scene load_steps=5 format=3 uid="uid://bwfwjooc68cpp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w6lqf"]
 albedo_color = Color(1, 0, 0, 1)
@@ -9,12 +9,7 @@ size = Vector3(2, 2, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6qtev"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kkje5"]
-albedo_color = Color(0, 0.501961, 1, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_8dfqg"]
-material = SubResource("StandardMaterial3D_kkje5")
-size = Vector3(2, 2, 2)
+[sub_resource type="CylinderMesh" id="CylinderMesh_w6lqf"]
 
 [node name="PlumbingMeshLibrary" type="Node3D"]
 
@@ -28,7 +23,7 @@ shape = SubResource("BoxShape3D_6qtev")
 
 [node name="Blue" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-mesh = SubResource("BoxMesh_8dfqg")
+mesh = SubResource("CylinderMesh_w6lqf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Blue"]
 
