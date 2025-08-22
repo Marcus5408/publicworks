@@ -1,11 +1,8 @@
 extends Camera3D
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-    pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# parallax to camera
 func _process(delta: float) -> void:
-    pass
+    var parallax_effect := Vector2(0.1, 0.1) # Adjust the parallax effect strength
+    var offset := (Vector2(global_transform.origin.x, global_transform.origin.y) * parallax_effect) * delta
+    global_transform.origin -= Vector3(offset.x, offset.y, 0)
