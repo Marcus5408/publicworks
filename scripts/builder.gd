@@ -10,7 +10,6 @@ var index:int = 0 # Index of structure being built
 @export var selector_container:Node3D # Node that holds a preview of the structure
 @export var view_camera:Camera3D # Used for raycasting mouse
 @export var gridmap:GridMap
-@export var cash_display:Label
 
 var plane:Plane # Used for raycasting mouse
 
@@ -35,7 +34,6 @@ func _ready():
     gridmap.mesh_library = mesh_library
     
     update_structure()
-    update_cash()
 
 func _process(delta):
     
@@ -82,7 +80,6 @@ func action_build(gridmap_position):
         
         if previous_tile != index:
             map.cash -= structures[index].price
-            update_cash()
 
 # Demolish (remove) a structure
 
@@ -119,9 +116,6 @@ func update_structure():
     selector_container.add_child(_model)
     _model.position.y += 0.25
     
-func update_cash():
-    cash_display.text = "$" + str(map.cash)
-
 # Saving/load
 
 func action_save():
@@ -152,5 +146,3 @@ func action_load():
             map = DataMap.new()
         for cell in map.structures:
             gridmap.set_cell_item(Vector3i(cell.position.x, 0, cell.position.y), cell.structure, cell.orientation)
-            
-        update_cash()
