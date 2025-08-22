@@ -15,6 +15,9 @@ enum GameState {
 #       <level_id>: { "name" (string): "<level_name>", "map" (string): "<map_path>", "loadout" (Array[Structure]): { } }
 #   }
 const levels: Dictionary = {
+    0: {
+
+    },
     1: {
         1: {
             "name": "Level 1-1",

@@ -8,6 +8,8 @@ var index:int = 0 # Index of structure being built
 
 @export var selector:Node3D # The 'cursor'
 @export var selector_container:Node3D # Node that holds a preview of the structure
+@export var structure_next_container: Node3D
+@export var structure_previous_container: Node3D
 @export var view_camera:Camera3D # Used for raycasting mouse
 @export var gridmap:GridMap
 
@@ -107,15 +109,25 @@ func action_structure_toggle():
 # Update the structure visual in the 'cursor'
 
 func update_structure():
-    # Clear previous structure preview in selector
+    # Clear previous structure previews in selector
     for n in selector_container.get_children():
         selector_container.remove_child(n)
-        
-    # Create new structure preview in selector
+    for n in structure_next_container.get_children():
+        structure_next_container.remove_child(n)
+    for n in structure_previous_container.get_children():
+        structure_previous_container.remove_child(n)
+
+    # Create new structure previews in selector
     var _model = structures[index].model.instantiate()
     selector_container.add_child(_model)
     _model.position.y += 0.25
-    
+    var _next_model_index = wrap(index + 1, 0, structures.size())
+    var _prev_model_index = wrap(index - 1, 0, structures.size())
+    var _next_model = structures[_next_model_index].model.instantiate()
+    var _prev_model = structures[_prev_model_index].model.instantiate()
+    structure_next_container.add_child(_next_model)
+    structure_previous_container.add_child(_prev_model)
+
 # Saving/load
 
 func action_save():
