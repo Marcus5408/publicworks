@@ -10,20 +10,14 @@ var index:int = 0 # Index of structure being built
 @export var selector_container:Node3D # Node that holds a preview of the structure
 @export var view_camera:Camera3D # Used for raycasting mouse
 @export var gridmap:GridMap
-@export var cash_display_path:NodePath
+@export var cash_display:Label
 
-var cash_display:Label
-
-var plane:Plane
-
+var plane:Plane # Used for raycasting mouse
 
 func _ready():
     
     map = DataMap.new()
     plane = Plane(Vector3.UP, Vector3.ZERO)
-    
-    # Assign cash_display from the exported NodePath
-    cash_display = get_node(cash_display_path) as Label
     
     # Create new MeshLibrary dynamically, can also be done in the editor
     # See: https://docs.godotengine.org/en/stable/tutorials/3d/using_gridmaps.html
@@ -40,8 +34,6 @@ func _ready():
         
     gridmap.mesh_library = mesh_library
     
-    update_structure()
-    update_cash()
     update_structure()
     update_cash()
 

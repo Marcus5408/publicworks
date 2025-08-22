@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg872do57yt22"
-path.s3tc="res://.godot/imported/picker.png-f8f42c9ef2a57cad1cc595e34dc61adc.s3tc.ctex"
-path.etc2="res://.godot/imported/picker.png-f8f42c9ef2a57cad1cc595e34dc61adc.etc2.ctex"
+uid="uid://cbk07cxgshg26"
+path.s3tc="res://.godot/imported/selector.png-a5b2e7bc2bf34414a6d0f4a4e1472988.s3tc.ctex"
+path.etc2="res://.godot/imported/selector.png-a5b2e7bc2bf34414a6d0f4a4e1472988.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/picker.png"
-dest_files=["res://.godot/imported/picker.png-f8f42c9ef2a57cad1cc595e34dc61adc.s3tc.ctex", "res://.godot/imported/picker.png-f8f42c9ef2a57cad1cc595e34dc61adc.etc2.ctex"]
+source_file="res://sprites/selector.png"
+dest_files=["res://.godot/imported/selector.png-a5b2e7bc2bf34414a6d0f4a4e1472988.s3tc.ctex", "res://.godot/imported/selector.png-a5b2e7bc2bf34414a6d0f4a4e1472988.etc2.ctex"]
 
 [params]
 
