@@ -3,18 +3,18 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://h0vrvst3cumo"
-path="res://.godot/imported/building-small-d.glb-5e1b608dc43429cd8ce16f120ad53455.scn"
+uid="uid://c86mxbnji7re1"
+path="res://.godot/imported/sedan.glb-f9b0cc85276d134f9f7e1c5cd373d9c6.scn"
 
 [deps]
 
-source_file="res://models/building-small-d.glb"
-dest_files=["res://.godot/imported/building-small-d.glb-5e1b608dc43429cd8ce16f120ad53455.scn"]
+source_file="res://models/sedan/sedan.glb"
+dest_files=["res://.godot/imported/sedan.glb-f9b0cc85276d134f9f7e1c5cd373d9c6.scn"]
 
 [params]
 
-nodes/root_type="Node3D"
-nodes/root_name="Scene Root"
+nodes/root_type=""
+nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
@@ -33,5 +33,5 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-gltf/naming_version=0
+gltf/naming_version=1
 gltf/embedded_image_handling=1

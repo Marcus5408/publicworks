@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://m74mvao50wnm"
-path="res://.godot/imported/building-small-c.glb-73a68022181ffa29853dcbcb1d8aaef9.scn"
+uid="uid://d0nnrx2y4px2v"
+path="res://.godot/imported/building-garage.glb-0b6a1996f0b248668d8ec885d0eac91e.scn"
 
 [deps]
 
-source_file="res://models/building-small-c.glb"
-dest_files=["res://.godot/imported/building-small-c.glb-73a68022181ffa29853dcbcb1d8aaef9.scn"]
+source_file="res://models/buildings/building-garage.glb"
+dest_files=["res://.godot/imported/building-garage.glb-0b6a1996f0b248668d8ec885d0eac91e.scn"]
 
 [params]
 

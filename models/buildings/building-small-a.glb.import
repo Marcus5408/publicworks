@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d2h51qlls136h"
-path="res://.godot/imported/building-small-b.glb-437a13e47ceef14c49e1239f5579f287.scn"
+uid="uid://cnycdi6t5tj01"
+path="res://.godot/imported/building-small-a.glb-9d1f27753291e96bc3934f2d50d9b091.scn"
 
 [deps]
 
-source_file="res://models/building-small-b.glb"
-dest_files=["res://.godot/imported/building-small-b.glb-437a13e47ceef14c49e1239f5579f287.scn"]
+source_file="res://models/buildings/building-small-a.glb"
+dest_files=["res://.godot/imported/building-small-a.glb-9d1f27753291e96bc3934f2d50d9b091.scn"]
 
 [params]
 
