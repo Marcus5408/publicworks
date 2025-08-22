@@ -17,7 +17,7 @@ func _ready():
     
     map = DataMap.new()
     plane = Plane(Vector3.UP, Vector3.ZERO)
-    
+
     # Create new MeshLibrary dynamically, can also be done in the editor
     # See: https://docs.godotengine.org/en/stable/tutorials/3d/using_gridmaps.html
     
@@ -134,14 +134,14 @@ func action_save():
             map.structures.append(data_structure)
             
         ResourceSaver.save(map, "user://map.res")
-    
-func action_load():
+
+func action_load(map_file: String = "user://map.res"):
     if Input.is_action_just_pressed("load"):
-        print("Loading map...")
-        
+        print("Loading map at \"", map_file, "\"...")
+
         gridmap.clear()
-        
-        map = ResourceLoader.load("user://map.res")
+
+        map = ResourceLoader.load(map_file)
         if not map:
             map = DataMap.new()
         for cell in map.structures:
