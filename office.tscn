@@ -1,6 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://cm7ribhx64568"]
+[gd_scene load_steps=21 format=3 uid="uid://cm7ribhx64568"]
 
-[ext_resource type="Script" uid="uid://bgxtnttx4o7oj" path="res://builder.gd" id="1_ei2s5"]
+[ext_resource type="Script" uid="uid://buh01uakffcnq" path="res://scripts/builder.gd" id="1_70x1r"]
 [ext_resource type="Script" uid="uid://b0njgb3uy3eu6" path="res://scripts/structure.gd" id="2_3xqf3"]
 [ext_resource type="Texture2D" uid="uid://bg872do57yt22" path="res://assets/picker.png" id="2_u8nhc"]
 [ext_resource type="Resource" uid="uid://ch8vtcpine1lc" path="res://structures/pavement.tres" id="3_70x1r"]
@@ -10,6 +10,7 @@
 [ext_resource type="Resource" uid="uid://cqvwy36htu81" path="res://structures/road-split.tres" id="7_2uxut"]
 [ext_resource type="Resource" uid="uid://mxrnqinnsqnt" path="res://structures/road-straight-lightposts.tres" id="8_n1y4y"]
 [ext_resource type="Resource" uid="uid://dv14kkhb6umkv" path="res://structures/road-straight.tres" id="9_m8tx5"]
+[ext_resource type="Script" uid="uid://cyqmverbsw2yx" path="res://scripts/view.gd" id="11_knsl5"]
 
 [sub_resource type="Gradient" id="Gradient_8yeiw"]
 colors = PackedColorArray(1, 1, 1, 1, 0.43189, 0.43189, 0.43189, 1)
@@ -54,7 +55,7 @@ orientation = 2
 ambient_light_color = Color(0.765, 0.837, 0.9, 1)
 ambient_light_energy = 3.0
 
-[node name="Node3D" type="Node3D"]
+[node name="Main" type="Node3D"]
 
 [node name="Table" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_8yeiw")
@@ -66,11 +67,6 @@ mesh = SubResource("PlaneMesh_hsito")
 [node name="RightWall" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, -50)
 mesh = SubResource("PlaneMesh_g3mwp")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.707107, -0.353553, 0.612373, 0, 0.866026, 0.5, -0.707107, -0.353553, 0.612373, 30, 27.332, 30)
-projection = 1
-size = 55.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_8yeiw")
@@ -84,22 +80,30 @@ spot_range = 576.099
 spot_angle = 54.36
 
 [node name="Builder" type="Node3D" parent="." node_paths=PackedStringArray("selector", "selector_container", "view_camera", "gridmap")]
-script = ExtResource("1_ei2s5")
+script = ExtResource("1_70x1r")
 structures = Array[ExtResource("2_3xqf3")]([ExtResource("3_70x1r"), ExtResource("4_knsl5"), ExtResource("5_s0aar"), ExtResource("6_gxl1f"), ExtResource("7_2uxut"), ExtResource("8_n1y4y"), ExtResource("9_m8tx5")])
 selector = NodePath("Selector")
 selector_container = NodePath("Selector/Container")
-view_camera = NodePath("../Camera3D")
+view_camera = NodePath("../View/Camera")
 gridmap = NodePath("../GridMap")
 
 [node name="Selector" type="Node3D" parent="Builder"]
 
 [node name="Sprite" type="Sprite3D" parent="Builder/Selector"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.01, 0)
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, 0, 0.01, 0)
 texture = ExtResource("2_u8nhc")
 
 [node name="Container" type="Node3D" parent="Builder/Selector"]
 
+[node name="View" type="Node3D" parent="."]
+script = ExtResource("11_knsl5")
+
+[node name="Camera" type="Camera3D" parent="View"]
+transform = Transform3D(0.707107, -0.353553, 0.612373, 0, 0.866026, 0.499999, -0.707107, -0.353553, 0.612373, 30, 27.332, 30)
+size = 37.109
+
 [node name="GridMap" type="GridMap" parent="."]
+cell_size = Vector3(4, 4, 4)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d2h51qlls136h"
-path="res://.godot/imported/building-small-b.glb-7e17fb87420f74152d0bea1b393c2b14.scn"
+uid="uid://mu30r6rmht07"
+path="res://.godot/imported/road-split.glb-84d39fa6e15630686f271db254fa4ade.scn"
 
 [deps]
 
-source_file="res://assets/models/building-small-b.glb"
-dest_files=["res://.godot/imported/building-small-b.glb-7e17fb87420f74152d0bea1b393c2b14.scn"]
+source_file="res://models/road-split.glb"
+dest_files=["res://.godot/imported/road-split.glb-84d39fa6e15630686f271db254fa4ade.scn"]
 
 [params]
 

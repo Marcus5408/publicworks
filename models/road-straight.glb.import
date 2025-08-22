@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://5kchntr735l"
-path="res://.godot/imported/road-straight-lightposts.glb-0cdecc4cc64bf7ee9b8695ec230030df.scn"
+uid="uid://b4tgtg0j2dgh8"
+path="res://.godot/imported/road-straight.glb-31d31cca3c90d98620d476ef869ee90d.scn"
 
 [deps]
 
-source_file="res://assets/models/road-straight-lightposts.glb"
-dest_files=["res://.godot/imported/road-straight-lightposts.glb-0cdecc4cc64bf7ee9b8695ec230030df.scn"]
+source_file="res://models/road-straight.glb"
+dest_files=["res://.godot/imported/road-straight.glb-31d31cca3c90d98620d476ef869ee90d.scn"]
 
 [params]
 

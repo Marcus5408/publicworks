@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cr3btp34bp3eg"
-path="res://.godot/imported/grass.glb-7b2cc5bb8ebe3d27d15a269ca3bfab9f.scn"
+uid="uid://euxdh7lkq0oj"
+path="res://.godot/imported/road-intersection.glb-8962e4b1c3c280c3abad7b8b01fadb0a.scn"
 
 [deps]
 
-source_file="res://assets/models/grass.glb"
-dest_files=["res://.godot/imported/grass.glb-7b2cc5bb8ebe3d27d15a269ca3bfab9f.scn"]
+source_file="res://models/road-intersection.glb"
+dest_files=["res://.godot/imported/road-intersection.glb-8962e4b1c3c280c3abad7b8b01fadb0a.scn"]
 
 [params]
 

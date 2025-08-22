@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://mu30r6rmht07"
-path="res://.godot/imported/road-split.glb-3a6a84a4db62000ca55aac73c186550b.scn"
+uid="uid://b1711sieed2u6"
+path="res://.godot/imported/grass-trees.glb-0492608f30e8f36fd08db19dc56a2fc4.scn"
 
 [deps]
 
-source_file="res://assets/models/road-split.glb"
-dest_files=["res://.godot/imported/road-split.glb-3a6a84a4db62000ca55aac73c186550b.scn"]
+source_file="res://models/grass-trees.glb"
+dest_files=["res://.godot/imported/grass-trees.glb-0492608f30e8f36fd08db19dc56a2fc4.scn"]
 
 [params]
 

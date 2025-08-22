@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://h0vrvst3cumo"
-path="res://.godot/imported/building-small-d.glb-9675dfa5fb1f0b3721b7586ea35556a1.scn"
+uid="uid://6v0t536s83vb"
+path="res://.godot/imported/pavement-fountain.glb-0424db34de6f91479f6cbd7008475b67.scn"
 
 [deps]
 
-source_file="res://assets/models/building-small-d.glb"
-dest_files=["res://.godot/imported/building-small-d.glb-9675dfa5fb1f0b3721b7586ea35556a1.scn"]
+source_file="res://models/pavement-fountain.glb"
+dest_files=["res://.godot/imported/pavement-fountain.glb-0424db34de6f91479f6cbd7008475b67.scn"]
 
 [params]
 

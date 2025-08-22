@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://6v0t536s83vb"
-path="res://.godot/imported/pavement-fountain.glb-957b156ad138c666600f7bba1deb25f1.scn"
+uid="uid://cpv75mfsda1ml"
+path="res://.godot/imported/pavement.glb-e677d053825d20c1d08d69229498f8a6.scn"
 
 [deps]
 
-source_file="res://assets/models/pavement-fountain.glb"
-dest_files=["res://.godot/imported/pavement-fountain.glb-957b156ad138c666600f7bba1deb25f1.scn"]
+source_file="res://models/pavement.glb"
+dest_files=["res://.godot/imported/pavement.glb-e677d053825d20c1d08d69229498f8a6.scn"]
 
 [params]
 

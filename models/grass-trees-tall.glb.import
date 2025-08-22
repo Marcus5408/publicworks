@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c4ccm2qr5wa58"
-path="res://.godot/imported/road-corner.glb-4ef4125f955d0df548bb1114635316ea.scn"
+uid="uid://dy26b1ba2j2v1"
+path="res://.godot/imported/grass-trees-tall.glb-7300613123c00a0615ded796764a0c0a.scn"
 
 [deps]
 
-source_file="res://assets/models/road-corner.glb"
-dest_files=["res://.godot/imported/road-corner.glb-4ef4125f955d0df548bb1114635316ea.scn"]
+source_file="res://models/grass-trees-tall.glb"
+dest_files=["res://.godot/imported/grass-trees-tall.glb-7300613123c00a0615ded796764a0c0a.scn"]
 
 [params]
 
