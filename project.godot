@@ -13,7 +13,7 @@ config_version=5
 config/name="Public Works"
 run/main_scene="uid://vgwrcfy1qawf"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="res://icon.svg"
+config/icon="uid://6nxg1w7k6er7"
 
 [display]
 
